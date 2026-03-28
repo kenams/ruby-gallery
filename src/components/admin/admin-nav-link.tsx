@@ -1,19 +1,17 @@
 "use client";
 
-import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
 export function AdminNavLink({
   href,
-  label,
-  icon: Icon
+  children
 }: {
   href: string;
-  label: string;
-  icon: LucideIcon;
+  children: ReactNode;
 }) {
   const pathname = usePathname();
   const active =
@@ -30,8 +28,7 @@ export function AdminNavLink({
           : "border border-transparent text-ink/68 hover:border-black/6 hover:bg-white/70 hover:text-ink"
       )}
     >
-      <Icon size={16} />
-      {label}
+      {children}
     </Link>
   );
 }

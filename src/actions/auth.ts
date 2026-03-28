@@ -32,11 +32,7 @@ export async function loginAction(_: AuthActionState, formData: FormData): Promi
     };
   }
 
-  await setSessionCookie({
-    sub: user.id,
-    email: user.email,
-    name: user.name
-  });
+  await setSessionCookie();
 
   redirect("/admin");
 }

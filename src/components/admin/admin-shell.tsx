@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { LayoutGrid, LogOut, PaintbrushVertical, Rows3, Settings2 } from "lucide-react";
 
-import { logoutAction } from "@/actions/auth";
 import { AdminNavLink } from "@/components/admin/admin-nav-link";
 import { getSiteSettings } from "@/lib/site-settings";
 
@@ -37,11 +36,14 @@ export async function AdminShell({
 
           <nav className="mt-6 grid gap-2">
             {navItems.map(({ href, label, icon: Icon }) => (
-              <AdminNavLink key={href} href={href} label={label} icon={Icon} />
+              <AdminNavLink key={href} href={href}>
+                <Icon size={16} />
+                {label}
+              </AdminNavLink>
             ))}
           </nav>
 
-          <form action={logoutAction} className="mt-8 border-t border-black/6 pt-5">
+          <form action="/api/admin/logout" method="POST" className="mt-8 border-t border-black/6 pt-5">
             <button
               type="submit"
               className="inline-flex items-center gap-3 rounded-[1.25rem] border border-black/10 bg-white/70 px-4 py-3 text-sm text-ink/62 transition hover:border-ruby/20 hover:bg-white hover:text-ruby"

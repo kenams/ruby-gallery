@@ -17,8 +17,8 @@ export default async function AdminDashboardPage() {
 
   return (
     <AdminShell
-      title="Un studio d'administration simple et net."
-      description="Depuis ici, Ruby peut piloter la galerie, les prix, les statuts, les contenus du site et la coherence globale de sa presence en ligne."
+      title="Bienvenue Admin"
+      description="Depuis ici, tu peux piloter la galerie, les prix, les statuts, les contenus du site et la coherence globale de la presence en ligne."
     >
       <div className="grid gap-6 xl:grid-cols-[0.95fr_1.05fr]">
         <section className="grid gap-4 md:grid-cols-2">

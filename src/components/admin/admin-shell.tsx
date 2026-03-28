@@ -20,7 +20,9 @@ export async function AdminShell({
   description: string;
   children: React.ReactNode;
 }) {
-  const settings = await getSiteSettings();
+  const settings = await getSiteSettings().catch(() => ({
+    artistName: "Ruby"
+  }));
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(255,250,245,1)_0%,rgba(244,239,232,1)_45%,rgba(240,233,225,1)_100%)]">

@@ -6,9 +6,9 @@ export const defaultSiteSettingsSeed = {
     "Ruby vit et travaille en Occitanie. Depuis huit ans, elle developpe une peinture attentive a la matiere, a la lenteur du regard et a la retenue des formes.\n\nSa pratique s'ancre dans des couches fines, des reserves et des tensions sourdes qui laissent a chaque oeuvre une presence calme, durable et tres physique dans l'espace.\n\nAvant l'integration des textes definitifs, cette version conserve une base editoriale premium, claire et directement exploitable en presentation client.",
   about:
     "Le travail de Ruby se construit dans un equilibre entre silence, profondeur et lumiere tenue. Chaque toile cherche une justesse plutot qu'un effet, avec une ecriture contemporaine sobre et sensible.\n\nL'atelier devient un lieu de depots, de retraits et de reprises. Les surfaces avancent lentement jusqu'a trouver une densite stable, capable d'accompagner un interieur, une collection ou un projet d'accrochage.\n\nCette section est deja prete a accueillir la biographie definitive et la formulation exacte voulue pour la mise en ligne.",
-  heroTitle: "Une peinture originale pensee pour les lieux qui laissent la lumiere respirer.",
+  heroTitle: "Des toiles calmes pour des espaces choisis.",
   heroSubtitle:
-    "Ruby construit des oeuvres sensibles ou la couleur avance par strates, reserves et tensions retenues. Sa peinture cherche moins l'effet qu'une forme de presence durable, sobre et silencieuse.",
+    "Ruby compose des peintures originales ou la matiere, la reserve et la lumiere installent une presence sobre, silencieuse et durable.",
   email: "",
   phone: "",
   instagram: "",

@@ -4,7 +4,8 @@ export function Logo({ artistName = "Ruby" }: { artistName?: string }) {
   return (
     <Link
       href="/"
-      className="inline-flex items-center gap-4"
+      prefetch
+      className="relative z-10 inline-flex cursor-pointer items-center gap-4 rounded-full focus-visible:outline-none"
       aria-label={`${artistName}, retour a l'accueil`}
     >
       <span className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white/80 font-display text-xl italic text-ink shadow-[0_10px_24px_rgba(23,19,17,0.04)]">

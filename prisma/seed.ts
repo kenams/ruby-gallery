@@ -1,4 +1,3 @@
-import bcrypt from "bcryptjs";
 import { PrismaClient } from "@prisma/client";
 
 import { defaultSiteSettingsSeed, starterArtworkSeed } from "../src/lib/starter-data";
@@ -6,23 +5,6 @@ import { defaultSiteSettingsSeed, starterArtworkSeed } from "../src/lib/starter-
 const prisma = new PrismaClient();
 
 async function main() {
-  const adminEmail = process.env.ADMIN_EMAIL ?? "admin@ruby-gallery.local";
-  const adminPassword = process.env.ADMIN_PASSWORD ?? "ChangeThisPassword123!";
-  const passwordHash = await bcrypt.hash(adminPassword, 10);
-
-  await prisma.user.upsert({
-    where: { email: adminEmail },
-    update: {
-      name: "Ruby Admin",
-      passwordHash
-    },
-    create: {
-      email: adminEmail,
-      name: "Ruby Admin",
-      passwordHash
-    }
-  });
-
   await prisma.siteSetting.upsert({
     where: { key: "homepage_baseline" },
     update: {

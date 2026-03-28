@@ -25,23 +25,6 @@ export async function getSession() {
   return ADMIN_SESSION;
 }
 
-export async function setSessionCookie() {
-  const store = await cookies();
-
-  store.set(COOKIE_NAME, "ok", {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    path: "/",
-    maxAge: 60 * 60 * 24 * 7
-  });
-}
-
-export async function clearSessionCookie() {
-  const store = await cookies();
-  store.delete(COOKIE_NAME);
-}
-
 export async function requireAdmin() {
   const session = await getSession();
 
@@ -50,14 +33,6 @@ export async function requireAdmin() {
   }
 
   return session;
-}
-
-export async function authenticateUser(email: string, password: string) {
-  if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
-    return ADMIN_SESSION;
-  }
-
-  return null;
 }
 
 export async function getSessionFromRequest(request: NextRequest) {

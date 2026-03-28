@@ -1,0 +1,132 @@
+ ⨯ TypeError: Cannot read properties of undefined (reading 'upsert')
+    at getSiteSettings (src\lib\site-settings.ts:22:30)
+    at Header (src\components\site\header.tsx:11:41)
+  20 |
+  21 | export async function getSiteSettings() {
+> 22 |   return prisma.siteSettings.upsert({
+     |                              ^
+  23 |     where: { singleton: "default" },
+  24 |     update: {},
+  25 |     create: { {
+  digest: '1249050707'
+}
+ ⨯ TypeError: Cannot read properties of undefined (reading 'upsert')
+    at getSiteSettings (src\lib\site-settings.ts:22:30)
+    at Footer (src\components\site\footer.tsx:9:41)
+  20 |
+  21 | export async function getSiteSettings() {
+> 22 |   return prisma.siteSettings.upsert({
+     |                              ^
+  23 |     where: { singleton: "default" },
+  24 |     update: {},
+  25 |     create: { {
+  digest: '2997918679'
+}
+ ⨯ TypeError: Cannot read properties of undefined (reading 'upsert')
+    at getSiteSettings (src\lib\site-settings.ts:22:30)
+    at Header (src\components\site\header.tsx:11:41)
+  20 |
+  21 | export async function getSiteSettings() {
+> 22 |   return prisma.siteSettings.upsert({
+     |                              ^
+  23 |     where: { singleton: "default" },
+  24 |     update: {},
+  25 |     create: { {
+  digest: '1249050707'
+}
+ ⨯ TypeError: Cannot read properties of undefined (reading 'upsert')
+    at getSiteSettings (src\lib\site-settings.ts:22:30)
+    at Footer (src\components\site\footer.tsx:9:41)
+  20 |
+  21 | export async function getSiteSettings() {
+> 22 |   return prisma.siteSettings.upsert({
+     |                              ^
+  23 |     where: { singleton: "default" },
+  24 |     update: {},
+  25 |     create: { {
+  digest: '2997918679'
+}
+ ⨯ TypeError: Cannot read properties of undefined (reading 'upsert')
+    at getSiteSettings (src\lib\site-settings.ts:22:30)
+    at HomePage (src\app\(site)\page.tsx:17:90)
+  20 |
+  21 | export async function getSiteSettings() {
+> 22 |   return prisma.siteSettings.upsert({
+     |                              ^
+  23 |     where: { singleton: "default" },
+  24 |     update: {},
+  25 |     create: { {
+  digest: '3957713165'
+}
+ ⨯ TypeError: Cannot read properties of undefined (reading 'upsert')
+    at getSiteSettings (src\lib\site-settings.ts:22:30)
+    at Header (src\components\site\header.tsx:11:41)
+  20 |
+  21 | export async function getSiteSettings() {
+> 22 |   return prisma.siteSettings.upsert({
+     |                              ^
+  23 |     where: { singleton: "default" },
+  24 |     update: {},
+  25 |     create: { {
+  digest: '1249050707'
+}
+ ⨯ TypeError: Cannot read properties of undefined (reading 'upsert')
+    at getSiteSettings (src\lib\site-settings.ts:22:30)
+    at Footer (src\components\site\footer.tsx:9:41)
+  20 |
+  21 | export async function getSiteSettings() {
+> 22 |   return prisma.siteSettings.upsert({
+     |                              ^
+  23 |     where: { singleton: "default" },
+  24 |     update: {},
+  25 |     create: { {
+  digest: '2997918679'
+}
+ ⨯ TypeError: Cannot read properties of undefined (reading 'upsert')
+    at getSiteSettings (src\lib\site-settings.ts:22:30)
+    at HomePage (src\app\(site)\page.tsx:17:90)
+  20 |
+  21 | export async function getSiteSettings() {
+> 22 |   return prisma.siteSettings.upsert({
+     |                              ^
+  23 |     where: { singleton: "default" },
+  24 |     update: {},
+  25 |     create: { {
+  digest: '3957713165'
+}
+ ⨯ TypeError: Cannot read properties of undefined (reading 'upsert')
+    at getSiteSettings (src\lib\site-settings.ts:22:30)
+    at Header (src\components\site\header.tsx:11:41)
+  20 |
+  21 | export async function getSiteSettings() {
+> 22 |   return prisma.siteSettings.upsert({
+     |                              ^
+  23 |     where: { singleton: "default" },
+  24 |     update: {},
+  25 |     create: { {
+  digest: '1249050707'
+}
+ ⨯ TypeError: Cannot read properties of undefined (reading 'upsert')
+    at getSiteSettings (src\lib\site-settings.ts:22:30)
+    at Footer (src\components\site\footer.tsx:9:41)
+  20 |
+  21 | export async function getSiteSettings() {
+> 22 |   return prisma.siteSettings.upsert({
+     |                              ^
+  23 |     where: { singleton: "default" },
+  24 |     update: {},
+  25 |     create: { {
+  digest: '2997918679'
+}
+ ⨯ TypeError: Cannot read properties of undefined (reading 'upsert')
+    at getSiteSettings (src\lib\site-settings.ts:22:30)
+    at HomePage (src\app\(site)\page.tsx:17:90)
+  20 |
+  21 | export async function getSiteSettings() {
+> 22 |   return prisma.siteSettings.upsert({
+     |                              ^
+  23 |     where: { singleton: "default" },
+  24 |     update: {},
+  25 |     create: { {
+  digest: '3957713165'
+}

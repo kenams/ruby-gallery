@@ -1,0 +1,48 @@
+
+> ruby-gallery@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.14
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.100:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1883ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4.8s (1568 modules)
+ GET / 200 in 6387ms
+ ○ Compiling /icon.svg ...
+ ✓ Compiled /icon.svg in 535ms (889 modules)
+ GET /icon.svg?06b1a4c8ef271b6d 200 in 697ms
+ ○ Compiling /gallery ...
+ ✓ Compiled /gallery in 560ms (1570 modules)
+ GET /gallery 200 in 782ms
+ GET /gallery 200 in 89ms
+ ✓ Compiled /about in 312ms (1561 modules)
+ GET /about 200 in 439ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 855ms (1684 modules)
+ GET /contact 200 in 1103ms
+ GET /icon.svg?06b1a4c8ef271b6d 200 in 30ms
+ GET / 200 in 82ms
+ ✓ Compiled in 336ms (691 modules)
+ ✓ Compiled in 256ms (691 modules)
+ GET / 200 in 315ms
+ GET / 200 in 65ms
+ ✓ Compiled in 641ms (1681 modules)
+ GET / 200 in 272ms
+ ✓ Compiled in 338ms (691 modules)
+ GET / 200 in 496ms
+ ✓ Compiled in 846ms (1681 modules)
+ GET / 200 in 566ms
+ GET / 200 in 63ms
+ GET / 200 in 60ms
+ ✓ Compiled in 696ms (1682 modules)
+ GET / 200 in 151ms
+ ✓ Compiled in 547ms (1682 modules)
+ GET / 200 in 109ms
+ ✓ Compiled in 296ms (691 modules)
+ GET / 200 in 69ms
+ ✓ Compiled in 868ms (1682 modules)
+ GET / 200 in 151ms

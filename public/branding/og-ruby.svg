@@ -1,0 +1,14 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F4EFE8"/>
+  <circle cx="966" cy="119" r="127" fill="#A67C52" fill-opacity="0.14"/>
+  <circle cx="184" cy="537" r="186" fill="#7F2D37" fill-opacity="0.11"/>
+  <rect x="618" y="82" width="454" height="466" rx="42" fill="#F8F3EC" stroke="#171311" stroke-opacity="0.06"/>
+  <rect x="664" y="128" width="362" height="374" rx="28" fill="#E9DDD0"/>
+  <path d="M699 397C784 318 839 294 893 255C944 218 972 183 1004 135" stroke="#7F2D37" stroke-width="24" stroke-linecap="round"/>
+  <path d="M719 448C835 363 910 353 1009 294" stroke="#A67C52" stroke-width="16" stroke-linecap="round" stroke-opacity="0.9"/>
+  <path d="M113 228H468" stroke="#171311" stroke-opacity="0.1"/>
+  <text x="112" y="196" fill="#7F2D37" font-family="Georgia, serif" font-size="20" letter-spacing="7">GALERIE CONTEMPORAINE</text>
+  <text x="110" y="316" fill="#171311" font-family="Georgia, serif" font-size="118">Ruby</text>
+  <text x="114" y="388" fill="#171311" fill-opacity="0.72" font-family="Arial, sans-serif" font-size="28">Peintures originales, sensibles et contemporaines</text>
+  <text x="114" y="432" fill="#171311" fill-opacity="0.72" font-family="Arial, sans-serif" font-size="28">Artiste peintre basee en Occitanie</text>
+</svg>

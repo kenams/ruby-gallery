@@ -1,0 +1,119 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum ArtworkStatus {
+  AVAILABLE
+  RESERVED
+  SOLD
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  CANCELLED
+}
+
+enum ContactStatus {
+  NEW
+  READ
+  REPLIED
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Artwork {
+  id             String         @id @default(cuid())
+  title          String
+  slug           String         @unique
+  coverImage     String
+  altText        String
+  description    String
+  priceInCents   Int
+  dimensions     String
+  year           Int
+  collection     String
+  status         ArtworkStatus  @default(AVAILABLE)
+  featured       Boolean        @default(false)
+  sortOrder      Int            @default(0)
+  seoTitle       String?
+  seoDescription String?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  images         ArtworkImage[]
+  orders         Order[]
+}
+
+model ArtworkImage {
+  id        String   @id @default(cuid())
+  artworkId String
+  url       String
+  altText   String
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  artwork   Artwork  @relation(fields: [artworkId], references: [id], onDelete: Cascade)
+}
+
+model Order {
+  id              String        @id @default(cuid())
+  artworkId       String
+  stripeSessionId String?       @unique
+  stripePaymentId String?       @unique
+  customerEmail   String?
+  customerName    String?
+  amountInCents   Int
+  currency        String        @default("eur")
+  status          PaymentStatus @default(PENDING)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  artwork         Artwork       @relation(fields: [artworkId], references: [id], onDelete: Restrict)
+}
+
+model ContactMessage {
+  id        String        @id @default(cuid())
+  name      String
+  email     String
+  message   String
+  status    ContactStatus @default(NEW)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+model SiteSettings {
+  id              String   @id @default(cuid())
+  singleton       String   @unique @default("default")
+  artistName      String   @default("Ruby")
+  bio             String   @default("")
+  about           String   @default("")
+  heroTitle       String   @default("")
+  heroSubtitle    String   @default("")
+  email           String   @default("")
+  phone           String   @default("")
+  instagram       String   @default("")
+  location        String   @default("Occitanie, France")
+  artistStatement String   @default("")
+  portraitImage   String   @default("")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model SiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

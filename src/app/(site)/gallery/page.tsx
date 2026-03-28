@@ -47,11 +47,20 @@ export default async function GalleryPage({
   return (
     <main className="grid-shell section-space">
       <Reveal>
-        <SectionHeading
-          eyebrow="Galerie"
-          title={galleryContent.title}
-          description={galleryContent.intro}
-        />
+        <div className="grid gap-8 xl:grid-cols-[0.95fr_1.05fr] xl:items-end">
+          <SectionHeading
+            eyebrow="Galerie"
+            title={galleryContent.title}
+            description={galleryContent.intro}
+          />
+          <div className="public-panel rounded-[2.2rem] px-6 py-7 md:px-8">
+            <p className="curatorial-note">Lecture de la galerie</p>
+            <p className="mt-4 text-sm leading-7 text-ink/64">
+              Les oeuvres sont presentees dans un rythme volontairement aere, avec un traitement
+              plus proche d'un accrochage editorial que d'un catalogue marchand.
+            </p>
+          </div>
+        </div>
       </Reveal>
 
       <div className="mt-8 grid gap-4 md:grid-cols-4">
@@ -61,16 +70,16 @@ export default async function GalleryPage({
           { label: "Reservees", value: stats.reserved },
           { label: "Vendues", value: stats.sold }
         ].map((item) => (
-          <div key={item.label} className="surface rounded-[1.8rem] px-5 py-5">
-            <p className="text-fine text-ruby/80">{item.label}</p>
-            <p className="mt-3 font-display text-4xl text-ink">{item.value}</p>
+          <div key={item.label} className="public-panel rounded-[1.9rem] px-5 py-6">
+            <p className="quiet-kicker">{item.label}</p>
+            <p className="mt-4 font-display text-[2.6rem] leading-none text-ink">{item.value}</p>
           </div>
         ))}
       </div>
 
       <div className="mt-10 grid gap-6 lg:grid-cols-[280px_1fr]">
-        <aside className="surface h-fit rounded-[2rem] p-6">
-          <p className="text-fine text-ruby/80">Filtres</p>
+        <aside className="public-panel h-fit rounded-[2.2rem] p-6">
+          <p className="quiet-kicker">Filtres</p>
 
           <div className="mt-5 grid gap-3">
             {[
@@ -83,10 +92,10 @@ export default async function GalleryPage({
                 key={item.value}
                 href={`/gallery?availability=${item.value}${collection ? `&collection=${encodeURIComponent(collection)}` : ""}${sort !== "curated" ? `&sort=${sort}` : ""}`}
                 className={cn(
-                  "rounded-full border px-4 py-3 text-sm transition",
+                  "filter-chip justify-center",
                   availability === item.value
-                    ? "border-ruby/30 bg-ruby/5 text-ruby"
-                    : "border-black/8 bg-white/60 text-ink/70 hover:border-ruby/20 hover:text-ruby"
+                    ? "filter-chip-active"
+                    : ""
                 )}
               >
                 {item.label}
@@ -95,7 +104,7 @@ export default async function GalleryPage({
           </div>
 
           <div className="mt-8">
-            <p className="text-fine text-ruby/80">Collections</p>
+            <p className="quiet-kicker">Collections</p>
             <div className="mt-5 flex flex-wrap gap-2">
               <Link
                 href={`/gallery?${new URLSearchParams({
@@ -103,10 +112,8 @@ export default async function GalleryPage({
                   ...(sort !== "curated" ? { sort } : {})
                 }).toString()}`}
                 className={cn(
-                  "rounded-full border px-4 py-2 text-sm transition",
-                  !collection
-                    ? "border-ruby/30 bg-ruby/5 text-ruby"
-                    : "border-black/8 bg-white/60 text-ink/70 hover:border-ruby/20 hover:text-ruby"
+                  "filter-chip py-2",
+                  !collection ? "filter-chip-active" : ""
                 )}
               >
                 Tout
@@ -120,10 +127,8 @@ export default async function GalleryPage({
                     ...(sort !== "curated" ? { sort } : {})
                   }).toString()}`}
                   className={cn(
-                    "rounded-full border px-4 py-2 text-sm transition",
-                    collection === item
-                      ? "border-ruby/30 bg-ruby/5 text-ruby"
-                      : "border-black/8 bg-white/60 text-ink/70 hover:border-ruby/20 hover:text-ruby"
+                    "filter-chip py-2",
+                    collection === item ? "filter-chip-active" : ""
                   )}
                 >
                   {item}
@@ -133,7 +138,7 @@ export default async function GalleryPage({
           </div>
 
           <div className="mt-8">
-            <p className="text-fine text-ruby/80">Tri</p>
+            <p className="quiet-kicker">Tri</p>
             <div className="mt-5 grid gap-3">
               {[
                 { value: "curated", label: "Accrochage curatorial" },
@@ -149,10 +154,8 @@ export default async function GalleryPage({
                     ...(item.value !== "curated" ? { sort: item.value } : {})
                   }).toString()}`}
                   className={cn(
-                    "rounded-full border px-4 py-3 text-sm transition",
-                    sort === item.value
-                      ? "border-ruby/30 bg-ruby/5 text-ruby"
-                      : "border-black/8 bg-white/60 text-ink/70 hover:border-ruby/20 hover:text-ruby"
+                    "filter-chip justify-center",
+                    sort === item.value ? "filter-chip-active" : ""
                   )}
                 >
                   {item.label}
@@ -163,17 +166,17 @@ export default async function GalleryPage({
         </aside>
 
         <div>
-          <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-            <p className="text-sm text-ink/55">
+          <div className="mb-8 flex flex-wrap items-center justify-between gap-3 border-b border-black/6 pb-5">
+            <p className="text-[0.72rem] uppercase tracking-[0.24em] text-ink/46">
               {artworks.length} oeuvre{artworks.length > 1 ? "s" : ""} affichee{artworks.length > 1 ? "s" : ""}
             </p>
-            <div className="text-sm text-ink/50">
+            <div className="text-[0.72rem] uppercase tracking-[0.24em] text-ink/42">
               {collection ? `Collection: ${collection}` : "Toutes les collections"}
             </div>
           </div>
 
           {artworks.length ? (
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-7 md:grid-cols-2">
               {artworks.map((artwork, index) => (
                 <Reveal key={artwork.id} delay={index * 0.05}>
                   <ArtworkCard artwork={artwork} />

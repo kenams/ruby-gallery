@@ -94,7 +94,7 @@ export default async function ArtworkDetailPage({
       />
 
       <div className="mb-8">
-        <Link href="/gallery" className="story-link">
+        <Link href="/gallery" className="note-link">
           <ArrowLeft size={15} />
           Retour a la galerie
         </Link>
@@ -103,34 +103,36 @@ export default async function ArtworkDetailPage({
       <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
         <ArtworkDetailGallery images={images} fallbackAlt={artwork.altText} />
 
-        <div className="surface h-fit rounded-[2.3rem] p-8 md:sticky md:top-28 md:p-10">
-          <p className="text-fine text-ruby/80">{artwork.collection}</p>
-          <h1 className="mt-5 font-display text-5xl leading-none tracking-hero text-ink md:text-6xl">
+        <div className="public-panel h-fit rounded-[2.5rem] p-8 md:sticky md:top-28 md:p-10">
+          <p className="quiet-kicker">{artwork.collection}</p>
+          <h1 className="section-title mt-5 max-w-[10ch]">
             {artwork.title}
           </h1>
 
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <StatusPill status={artwork.status} />
-            <p className="text-lg text-ink/75">{formatPrice(artwork.priceInCents)}</p>
+            <p className="text-[0.82rem] uppercase tracking-[0.22em] text-ink/62">
+              {formatPrice(artwork.priceInCents)}
+            </p>
           </div>
 
-          <div className="mt-8 grid gap-4 border-y border-black/6 py-6 text-sm text-ink/75">
-            <div className="flex items-center justify-between gap-4">
+          <div className="mt-8 py-6">
+            <div className="spec-row">
               <span>Dimensions</span>
               <span>{artwork.dimensions}</span>
             </div>
-            <div className="flex items-center justify-between gap-4">
+            <div className="spec-row">
               <span>Annee</span>
               <span>{artwork.year}</span>
             </div>
-            <div className="flex items-center justify-between gap-4">
+            <div className="spec-row">
               <span>Technique</span>
               <span>Huile et techniques mixtes sur toile</span>
             </div>
           </div>
 
           <div className="mt-8 space-y-5">
-            <p className="text-base leading-8 text-ink/72">{artwork.description}</p>
+            <p className="text-base leading-8 text-ink/70">{artwork.description}</p>
             <p className="text-sm leading-7 text-ink/58">
               Oeuvre originale signee par {settings.artistName}. Chaque tableau est pense pour exister dans
               la duree et pour s'integrer dans un lieu sans perdre sa tension propre.
@@ -151,9 +153,9 @@ export default async function ArtworkDetailPage({
             )}
           </div>
 
-          <div className="mt-8 grid gap-4 rounded-[1.75rem] border border-black/6 bg-pearl px-5 py-5 text-sm leading-7 text-ink/70">
+          <div className="public-soft-panel mt-8 grid gap-4 rounded-[1.9rem] px-5 py-6 text-sm leading-7 text-ink/68">
             <div>
-              <p className="text-fine text-ruby/80">Acquisition</p>
+              <p className="quiet-kicker">Acquisition</p>
               <p className="mt-2">
                 Paiement securise via Stripe, puis echange direct avec {settings.artistName} pour confirmer
                 les details de livraison et de presentation.
@@ -161,11 +163,11 @@ export default async function ArtworkDetailPage({
             </div>
             <div className="hairline" />
             <div>
-              <p className="text-fine text-ruby/80">Livraison & contact</p>
+              <p className="quiet-kicker">Livraison & contact</p>
               <p className="mt-2">
                 Livraison sur demande en France et en Europe. Pour une question sur l'accrochage,
                 une commande ou une oeuvre proche dans le meme esprit,{" "}
-                <Link href="/contact" className="story-link">
+                <Link href="/contact" className="note-link">
                   contactez {settings.artistName}
                 </Link>
                 .
@@ -178,12 +180,14 @@ export default async function ArtworkDetailPage({
 
       {related.length ? (
         <section className="mt-20">
-          <div className="flex items-end justify-between gap-4">
+          <div className="flex items-end justify-between gap-4 border-b border-black/6 pb-5">
             <div>
-              <p className="text-fine text-ruby/80">Autres oeuvres</p>
-              <h2 className="mt-4 font-display text-4xl text-ink">Poursuivre la visite</h2>
+              <p className="quiet-kicker">Autres oeuvres</p>
+              <h2 className="mt-4 font-display text-[2.7rem] leading-none tracking-[-0.04em] text-ink">
+                Poursuivre la visite
+              </h2>
             </div>
-            <Link href="/gallery" className="text-sm text-ruby transition hover:text-ink">
+            <Link href="/gallery" className="note-link">
               Retour a la galerie
             </Link>
           </div>

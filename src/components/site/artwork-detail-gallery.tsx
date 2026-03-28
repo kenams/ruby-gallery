@@ -20,14 +20,14 @@ export function ArtworkDetailGallery({
 
   return (
     <div className="grid gap-4">
-      <div className="relative aspect-[0.9] overflow-hidden rounded-[2.4rem] border border-black/6 bg-[#eadfd4] shadow-veil">
-        <div className="absolute inset-0 p-6 md:p-8">
+      <div className="museum-frame relative aspect-[0.92] overflow-hidden rounded-[2.6rem] shadow-[0_24px_60px_rgba(24,18,16,0.05)]">
+        <div className="absolute inset-0 p-6 md:p-10">
           <div className="relative h-full w-full">
             <Image
               src={activeImage.url}
               alt={activeImage.altText || fallbackAlt}
               fill
-              className="object-contain transition duration-700 hover:scale-[1.02]"
+              className="object-contain transition duration-700 hover:scale-[1.018]"
               priority
               sizes="(max-width: 1024px) 100vw, 55vw"
             />
@@ -43,10 +43,10 @@ export function ArtworkDetailGallery({
               type="button"
               onClick={() => setActiveIndex(index)}
               className={cn(
-                "relative aspect-square overflow-hidden rounded-[1.4rem] border bg-[#eadfd4] transition",
+                "museum-frame relative aspect-square overflow-hidden rounded-[1.5rem] transition",
                 activeIndex === index
-                  ? "border-ruby/35 shadow-veil"
-                  : "border-black/6 hover:border-ruby/20"
+                  ? "border-ruby/30 shadow-[0_18px_36px_rgba(24,18,16,0.05)]"
+                  : "border-black/10 hover:border-ruby/20"
               )}
               aria-label={`Voir l'image ${index + 1}`}
             >

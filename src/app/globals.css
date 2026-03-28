@@ -78,6 +78,17 @@
     background-image: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(249,244,237,0.9) 100%);
   }
 
+  .public-panel {
+    @apply border border-black/10 shadow-[0_18px_48px_rgba(24,18,16,0.045)] backdrop-blur;
+    background-color: rgba(255, 255, 255, 0.82);
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(249,244,238,0.88) 100%);
+  }
+
+  .public-soft-panel {
+    @apply border bg-[#fbf7f1] shadow-[0_14px_34px_rgba(24,18,16,0.03)];
+    border-color: rgba(23, 19, 17, 0.08);
+  }
+
   .museum-card-dark {
     @apply border border-white/10 bg-[#181312] text-[#f6efe6] shadow-[0_24px_70px_rgba(24,18,16,0.18)];
     background-image: linear-gradient(180deg, rgba(28,22,21,0.98) 0%, rgba(19,15,14,0.98) 100%);
@@ -218,6 +229,22 @@
     line-height: 0.98;
   }
 
+  .section-title {
+    @apply font-display text-ink;
+    font-size: clamp(2.55rem, 5vw, 4.6rem);
+    line-height: 0.97;
+    letter-spacing: -0.038em;
+    text-wrap: balance;
+  }
+
+  .section-copy {
+    @apply text-sm leading-8 text-ink/70 md:text-[0.98rem];
+  }
+
+  .curatorial-note {
+    @apply text-[0.7rem] uppercase tracking-[0.34em] text-ink/40;
+  }
+
   .lux-nav {
     @apply text-[0.72rem] uppercase tracking-[0.28em] text-ink/60 transition duration-300 hover:text-ink;
   }
@@ -241,5 +268,37 @@
     border-color: rgba(127, 45, 55, 0.18);
     background-color: rgba(255, 255, 255, 0.88);
     color: rgba(23, 19, 17, 0.96);
+  }
+
+  .filter-chip {
+    @apply inline-flex items-center rounded-full border border-black/10 px-4 py-3 text-[0.72rem] uppercase tracking-[0.24em] text-ink/60 transition duration-300;
+    background-color: rgba(255, 255, 255, 0.72);
+  }
+
+  .filter-chip:hover {
+    border-color: rgba(127, 45, 55, 0.18);
+    color: rgba(127, 45, 55, 0.92);
+  }
+
+  .filter-chip-active {
+    @apply border-ruby/20 text-ruby;
+    background-color: rgba(127, 45, 55, 0.05);
+  }
+
+  .spec-row {
+    @apply flex items-center justify-between gap-4 border-b py-4 text-[0.82rem] uppercase tracking-[0.18em] text-ink/60;
+    border-color: rgba(23, 19, 17, 0.06);
+  }
+
+  .spec-row:last-child {
+    @apply border-b-0 pb-0;
+  }
+
+  .spec-row:first-child {
+    @apply pt-0;
+  }
+
+  .note-link {
+    @apply inline-flex items-center gap-2 text-[0.72rem] uppercase tracking-[0.28em] text-ruby/70 transition duration-300 hover:text-ink;
   }
 }

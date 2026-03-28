@@ -38,9 +38,9 @@ export function BuyButton({ artworkId }: { artworkId: string }) {
     <div className="space-y-3">
       <Button type="button" variant="buy" onClick={handleClick} disabled={loading} className="w-full md:w-auto">
         {loading ? <LoaderCircle className="animate-spin" size={16} /> : <Sparkles size={16} />}
-        {loading ? "Redirection vers Stripe..." : "Acheter cette oeuvre"}
+        {loading ? "Redirection vers Stripe..." : "Acquerir cette oeuvre"}
       </Button>
-      <div className="flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-ink/45">
+      <div className="flex items-center gap-2 text-[0.68rem] uppercase tracking-[0.24em] text-ink/46">
         <LockKeyhole size={14} />
         Paiement securise via Stripe
       </div>

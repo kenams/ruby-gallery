@@ -13,14 +13,14 @@ export function NavLink({ href, label }: { href: string; label: string }) {
     <Link
       href={href}
       className={cn(
-        "relative py-2 text-sm transition",
-        isActive ? "text-ink" : "text-ink/66 hover:text-ruby"
+        "lux-nav relative py-2",
+        isActive ? "text-ink" : "text-ink/60 hover:text-ink"
       )}
     >
       {label}
       <span
         className={cn(
-          "absolute bottom-0 left-0 h-px bg-ruby/60 transition-all duration-300",
+          "lux-nav-line absolute bottom-0 left-0 h-px transition-all duration-300",
           isActive ? "w-full" : "w-0"
         )}
       />

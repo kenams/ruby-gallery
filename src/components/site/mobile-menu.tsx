@@ -18,7 +18,7 @@ export function MobileMenu({ artistName = "Ruby" }: { artistName?: string }) {
         aria-expanded={open}
         aria-label="Ouvrir le menu"
         onClick={() => setOpen((value) => !value)}
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white/70 text-ink transition hover:border-ruby/30 hover:text-ruby"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white/80 text-ink transition duration-300 hover:border-ruby/20 hover:text-ruby"
       >
         {open ? <X size={18} /> : <Menu size={18} />}
       </button>
@@ -42,7 +42,7 @@ export function MobileMenu({ artistName = "Ruby" }: { artistName?: string }) {
             >
               <div className="mb-4 flex items-center justify-between border-b border-black/6 pb-4">
                 <p className="text-fine text-ruby/75">Navigation</p>
-                <span className="text-xs text-ink/45">{artistName}</span>
+                <span className="text-[0.62rem] uppercase tracking-[0.26em] text-ink/42">{artistName}</span>
               </div>
               <nav className="grid gap-3">
                 {navigation.map((item) => (
@@ -53,7 +53,7 @@ export function MobileMenu({ artistName = "Ruby" }: { artistName?: string }) {
                 <Link
                   href="/gallery"
                   onClick={() => setOpen(false)}
-                  className="mt-2 rounded-full border border-ink/10 bg-ink px-4 py-3 text-center text-sm tracking-[0.08em] text-pearl"
+                  className="lux-button mt-2 text-center"
                 >
                   Entrer dans la galerie
                 </Link>

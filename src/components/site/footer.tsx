@@ -17,7 +17,7 @@ export async function Footer() {
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <div>
               <p className="text-fine text-ruby/80">Collection & contact</p>
-              <h2 className="mt-5 max-w-[12ch] font-display text-4xl leading-none tracking-hero text-ink md:text-5xl">
+              <h2 className="lux-title mt-5 max-w-[12ch] text-4xl md:text-5xl">
                 Une presence digitale pour accompagner des oeuvres originales.
               </h2>
             </div>
@@ -30,14 +30,14 @@ export async function Footer() {
 
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.2fr_0.8fr_0.8fr] md:px-8">
         <div>
-          <p className="font-display text-3xl text-ink">{settings.artistName}</p>
+          <p className="font-display text-[2.6rem] tracking-[-0.04em] text-ink">{settings.artistName}</p>
           <p className="mt-4 max-w-md text-sm leading-7 text-ink/70">
             {siteConfig.baseline}
           </p>
         </div>
 
         <div>
-          <p className="text-[0.68rem] uppercase tracking-[0.28em] text-ruby/80">Navigation</p>
+          <p className="text-[0.64rem] uppercase tracking-[0.34em] text-ruby/80">Navigation</p>
           <div className="mt-4 grid gap-3">
             {navigation.map((item) => (
               <Link key={item.href} href={item.href} className="story-link">
@@ -57,7 +57,7 @@ export async function Footer() {
         </div>
 
         <div>
-          <p className="text-[0.68rem] uppercase tracking-[0.28em] text-ruby/80">Contact</p>
+          <p className="text-[0.64rem] uppercase tracking-[0.34em] text-ruby/80">Contact</p>
           <div className="mt-4 grid gap-3 text-sm text-ink/75">
             {hasConfiguredValue(email) ? (
               <a href={`mailto:${email}`} className="story-link w-fit">
@@ -78,7 +78,7 @@ export async function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-7xl flex-col gap-3 border-t border-black/5 px-5 py-5 text-xs text-ink/50 md:flex-row md:items-center md:justify-between md:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-3 border-t border-black/5 px-5 py-5 text-[0.68rem] uppercase tracking-[0.22em] text-ink/50 md:flex-row md:items-center md:justify-between md:px-8">
         <p>(c) {new Date().getFullYear()} {settings.artistName}. Tous droits reserves.</p>
         <p>
           Site realise par{" "}

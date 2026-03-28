@@ -30,7 +30,7 @@ export function ArtworkCard({ artwork }: { artwork: ArtworkWithImages }) {
             <StatusPill status={artwork.status} />
           </div>
           <div className="absolute bottom-5 left-5">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/78 px-3 py-1 text-[0.68rem] uppercase tracking-[0.24em] text-ink/65 backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[0.68rem] uppercase tracking-[0.24em] text-ink/70 backdrop-blur">
               {artwork.collection}
             </span>
           </div>

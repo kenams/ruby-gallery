@@ -37,9 +37,6 @@ Variables principales :
 - `DATABASE_URL`
 - `DIRECT_URL`
 - `NEXT_PUBLIC_SITE_URL`
-- `AUTH_SECRET`
-- `ADMIN_EMAIL`
-- `ADMIN_PASSWORD`
 - `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
 - `STRIPE_SECRET_KEY`
 - `STRIPE_WEBHOOK_SECRET`
@@ -184,12 +181,10 @@ Page :
 /admin/login
 ```
 
-Identifiants locaux par defaut si rien n'est defini dans `.env` :
+Compte de test du login admin :
 
-- email : `admin@ruby-gallery.local`
-- mot de passe : `ChangeThisPassword123!`
-
-En production, definis toujours un `ADMIN_PASSWORD` fort.
+- email : `admin@test.com`
+- mot de passe : `admin123`
 
 ## Deploy temporaire gratuit
 
